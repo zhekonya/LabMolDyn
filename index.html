@@ -1,0 +1,60 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Particles</title>
+    <style>
+      .controls {
+        display: flex;
+        gap: 16px;
+        margin-bottom: 16px;
+      }
+      .container {
+        position: relative;
+        width: 1024px;
+        height: 768px
+      }
+      .canvas {
+        border: 1px solid black;
+        padding: 0px;
+        margin: 0px;
+        background: transparent;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        width: 1024px;
+        height: 768px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="controls">
+        <label>
+          Substance
+          <select id="substance" name="substance">
+            <option>Ne</option>
+            <option>Ar</option>
+            <option>Kr</option>
+            <option>Xe</option>
+          </select>
+        </label>
+        <label>
+          Amount
+          <input id="amount" name="amount" value="1000" type="number"/>
+        </label>
+        <label>
+          Grid size
+          <input name="size" value="100000" type="number"/>
+        </label>
+        <button>Calculate</button>
+      </div>
+      <div id="container" class="container">
+        <canvas class="canvas" width="1024" height="768"></canvas>
+      </div>
+    </div>
+    <script src="./konva-8.3.1/konva.min.js"></script>
+    <script src="./modeling.js"></script>
+  </body>
+</html>
